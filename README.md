@@ -1,4 +1,4 @@
-# Flutter Clean Architecture Boilerplate
+# Flutter Bloc Clean Architecture Boilerplate
 
 This is a Flutter project boilerplate that adheres to the principles of Clean Architecture. It is designed to help you jumpstart your Flutter projects by providing a structured and organized project setup. This boilerplate utilizes the BLoC state management pattern, GetIt for dependency injection, and Freezed for code generation.
 

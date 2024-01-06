@@ -184,6 +184,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.6.4"
+  go_router:
+    dependency: "direct main"
+    description:
+      name: go_router
+      sha256: "3b40e751eaaa855179b416974d59d29669e750d2e50fcdb2b37f1cb0ca8c803a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "13.0.1"
   google_fonts:
     dependency: "direct main"
     description:
@@ -240,6 +248,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  logging:
+    dependency: transitive
+    description:
+      name: logging
+      sha256: "623a88c9594aa774443aa3eb2d41807a48486b5613e67599fb4c41c0ad47c340"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
   matcher:
     dependency: transitive
     description:
@@ -503,4 +519,4 @@ packages:
     version: "1.0.3"
 sdks:
   dart: ">=3.0.6 <4.0.0"
-  flutter: ">=3.7.0"
+  flutter: ">=3.10.0"

@@ -30,17 +30,14 @@ class _SplashScreenState extends State<SplashScreen> {
       listener: (context, state) {
         state.maybeMap(
           orElse: () {
-            Navigator.pushNamedAndRemoveUntil(
-                context, SIGN_IN, (route) => false);
+           
           },
           authenticating: (_) {},
           authenticated: (_) {
-            Navigator.pushNamedAndRemoveUntil(
-                context, HOME, (route) => false);
+           
           },
           isFirstTime: (_) {
-            Navigator.pushNamedAndRemoveUntil(
-                context, ONBOARDING_SCREEN, (route) => false);
+           
           },
         );
       },

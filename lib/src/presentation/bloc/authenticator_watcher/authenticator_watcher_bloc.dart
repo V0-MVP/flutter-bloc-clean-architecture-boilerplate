@@ -24,8 +24,7 @@ class AuthenticatorWatcherBloc
           if (token != null) {
             emit(const AuthenticatorWatcherState.authenticated());
           } else {
-             emit(const AuthenticatorWatcherState.isFirstTime());
-            // emit(const AuthenticatorWatcherState.unauthenticated());
+            emit(const AuthenticatorWatcherState.unauthenticated());
           }
         },
         signOut: (_) async {

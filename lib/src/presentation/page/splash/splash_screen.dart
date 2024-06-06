@@ -1,8 +1,8 @@
 import 'package:bloc_clean_architecture/src/comman/routes.dart';
 import 'package:bloc_clean_architecture/src/presentation/bloc/authenticator_watcher/authenticator_watcher_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,7 +14,8 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 1, microseconds: 900), () {
+
+    Future.delayed(const Duration(seconds: 2), () {
       Future.microtask(
         () => context.read<AuthenticatorWatcherBloc>().add(
               const AuthenticatorWatcherEvent.authCheckRequest(),
@@ -32,13 +33,18 @@ class _SplashScreenState extends State<SplashScreen> {
           orElse: () {
            
           },
-          authenticating: (_) {},
+          authenticating: (_) {
+
+          },
           authenticated: (_) {
-           
+            context.replaceNamed(AppRoutes.DASHBOARD_ROUTE_NAME);
           },
           isFirstTime: (_) {
            
           },
+          unauthenticated: (_) {
+            context.replaceNamed(AppRoutes.LOGIN_ROUTE_NAME);
+          }
         );
       },
       child: Scaffold(

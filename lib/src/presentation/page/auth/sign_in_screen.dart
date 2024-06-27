@@ -4,6 +4,7 @@ import 'package:bloc_clean_architecture/src/comman/toast.dart';
 import 'package:bloc_clean_architecture/src/presentation/bloc/sign_in_form/sign_in_form_bloc.dart';
 import 'package:bloc_clean_architecture/src/presentation/widget/custom_elevated_button.dart';
 import 'package:bloc_clean_architecture/src/presentation/widget/custom_text_form_field.dart';
+import 'package:bloc_clean_architecture/src/utilities/debouncer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -25,9 +26,7 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return BlocConsumer<SignInFormBloc, SignInFormState>(
       listener: (context, state) {
-        if (state.state == RequestState.loaded) {
-         
-        }
+        if (state.state == RequestState.loaded) {}
         if (state.state == RequestState.error) {
           showToast(
               msg: state.message,
@@ -71,7 +70,9 @@ class _SignInPageState extends State<SignInPage> {
                             });
                           },
                           icon: Icon(
-                            _obscureText ? FontAwesomeIcons.eye : FontAwesomeIcons.eyeSlash,
+                            _obscureText
+                                ? FontAwesomeIcons.eye
+                                : FontAwesomeIcons.eyeSlash,
                           ),
                         ),
                         onChanged: (v) {

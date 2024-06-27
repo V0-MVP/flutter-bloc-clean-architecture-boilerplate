@@ -1,4 +1,5 @@
 import 'package:bloc_clean_architecture/src/comman/constant.dart';
+import 'package:bloc_clean_architecture/src/utilities/debouncer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:form_field_validator/form_field_validator.dart';
@@ -6,7 +7,9 @@ import 'package:form_field_validator/form_field_validator.dart';
 enum TextFieldType { alphabet, email, text, password, phoneNumber, number }
 
 class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField({
+  final _debouncer = Debouncer(milliseconds: 500);
+
+   CustomTextFormField({
     Key? key,
     this.controller,
     this.textFieldType = TextFieldType.text,
@@ -161,7 +164,7 @@ class CustomTextFormField extends StatelessWidget {
         maxLines: maxLines,
         maxLength: maxLength,
         enabled: enabled,
-        onChanged: onChanged,
+        onChanged: (text) => _debouncer.run(() { onChanged!(text); }) ,
         textAlign: textAlign ?? TextAlign.left,
         obscureText: obscureText ?? false,
         style: theme.textTheme.bodyText1,

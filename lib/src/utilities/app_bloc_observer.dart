@@ -24,10 +24,25 @@ class AppBlocObserver extends BlocObserver {
   @override
   void onEvent(Bloc<Object?, Object?> bloc, Object? event) {
     final buffer = StringBuffer()
-      ..writeln('Bloc: ${bloc.runtimeType} | ${event.runtimeType}')
+     ..writeln('On Event :')
+      ..writeln('Bloc: ${bloc.runtimeType}')
       ..write('Event: ${event.toString().limit(200)}');
     logger.info(buffer.toString());
     super.onEvent(bloc, event);
+  }
+
+    @override
+  void onChange(BlocBase bloc, Change change) {
+    logger.info(
+      'Bloc: ${bloc.runtimeType} | ${change.currentState} | ${change.nextState}',
+    );
+    super.onChange(bloc, change);
+  }
+
+  @override
+  void onCreate(BlocBase bloc) {
+    logger.info('Bloc Created | ${bloc.runtimeType} ');
+    super.onCreate(bloc);
   }
 
   @override

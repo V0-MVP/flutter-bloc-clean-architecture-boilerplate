@@ -16,9 +16,11 @@ void main() {
   logger.runLogging(
     () => runZonedGuarded(
       () {
-        di.init();
+        WidgetsFlutterBinding.ensureInitialized();
         Bloc.transformer = bloc_concurrency.sequential();
         Bloc.observer = const AppBlocObserver();
+        di.init();
+
         runApp(const MyApp());
       },
       logger.logZoneError,

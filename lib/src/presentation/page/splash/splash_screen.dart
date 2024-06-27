@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
 
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 1), () {
       Future.microtask(
         () => context.read<AuthenticatorWatcherBloc>().add(
               const AuthenticatorWatcherEvent.authCheckRequest(),
@@ -64,7 +64,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     Text(
                       'Splash Screen.',
                       style: TextStyle(
-                        color: Theme.of(context).primaryColor,
+                        // color: Theme.of(context).primaryColor,
                         fontSize: 16,
                       ),
                     )

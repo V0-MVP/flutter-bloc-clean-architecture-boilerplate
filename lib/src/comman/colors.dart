@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 class ColorLight {
-  static const Color primary = Color(0xFFED6C2E);
+  static const Color primary = Color(0xFF102c57);
   static const Color background = Color(0xFFFAFAFA);
   static const Color card = Color(0xFFFFFFFF);
   static const Color fontTitle = Color(0xFF202020);

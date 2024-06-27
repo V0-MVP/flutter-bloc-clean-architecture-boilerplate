@@ -8,7 +8,9 @@ part 'sign_in_form_state.dart';
 part 'sign_in_form_bloc.freezed.dart';
 
 class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
-  SignInFormBloc(this._signInWithEmail) : super(SignInFormState.initial()) {
+  SignInFormBloc(
+    this._signInWithEmail
+    ) : super(SignInFormState.initial()) {
     on<SignInFormEvent>((event, emit) async {
       await event.map(
         initial: (_) {
@@ -27,7 +29,8 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
                 message: f.message,
               ),
             ),
-            (_) => emit(state.copyWith(state: RequestState.loaded)),
+            (_) =>
+          emit(state.copyWith(state: RequestState.loaded))
           );
         },
         emailOnChanged: (event) {

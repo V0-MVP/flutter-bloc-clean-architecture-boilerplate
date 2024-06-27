@@ -30,52 +30,52 @@ ThemeData themeLight(BuildContext context) {
       centerTitle: true,
     ),
     textTheme: GoogleFonts.poppinsTextTheme().copyWith(
-      headline1: GoogleFonts.poppins(
+      displayLarge: GoogleFonts.poppins(
         color: ColorLight.fontTitle,
         fontSize: 20,
         fontWeight: FontWeight.w500,
       ),
-      headline2: GoogleFonts.poppins(
+      displayMedium: GoogleFonts.poppins(
         color: ColorLight.fontTitle,
         fontSize: 18,
         fontWeight: FontWeight.w500,
       ),
-      headline3: GoogleFonts.poppins(
+      displaySmall: GoogleFonts.poppins(
         color: ColorLight.fontTitle,
         fontSize: 16,
         fontWeight: FontWeight.w500,
       ),
-      headline4: GoogleFonts.poppins(
+      headlineMedium: GoogleFonts.poppins(
         color: ColorLight.fontTitle,
         fontSize: 14,
         fontWeight: FontWeight.w500,
       ),
-      headline5: GoogleFonts.poppins(
+      headlineSmall: GoogleFonts.poppins(
         color: ColorLight.fontTitle,
         fontSize: 12,
         fontWeight: FontWeight.w500,
       ),
-      bodyText1: GoogleFonts.poppins(
+      bodyLarge: GoogleFonts.poppins(
         color: ColorLight.fontTitle,
         fontSize: 16,
         fontWeight: FontWeight.normal,
       ),
-      bodyText2: GoogleFonts.poppins(
+      bodyMedium: GoogleFonts.poppins(
         color: ColorLight.fontTitle,
         fontSize: 14,
         fontWeight: FontWeight.normal,
       ),
-      subtitle1: GoogleFonts.poppins(
+      titleMedium: GoogleFonts.poppins(
         color: ColorLight.fontSubtitle,
         fontSize: 14,
         fontWeight: FontWeight.normal,
       ),
-      subtitle2: GoogleFonts.poppins(
+      titleSmall: GoogleFonts.poppins(
         color: ColorLight.fontSubtitle,
         fontSize: 12,
         fontWeight: FontWeight.normal,
       ),
-      button: GoogleFonts.poppins(
+      labelLarge: GoogleFonts.poppins(
         color: Colors.white,
         fontSize: 14,
         fontWeight: FontWeight.normal,
@@ -112,52 +112,52 @@ ThemeData themeDark(BuildContext context) {
       centerTitle: true,
     ),
     textTheme: GoogleFonts.poppinsTextTheme().copyWith(
-      headline1: GoogleFonts.poppins(
+      displayLarge: GoogleFonts.poppins(
         color: ColorDark.fontTitle,
         fontSize: 20,
         fontWeight: FontWeight.w500,
       ),
-      headline2: GoogleFonts.poppins(
+      displayMedium: GoogleFonts.poppins(
         color: ColorDark.fontTitle,
         fontSize: 18,
         fontWeight: FontWeight.w500,
       ),
-      headline3: GoogleFonts.poppins(
+      displaySmall: GoogleFonts.poppins(
         color: ColorDark.fontTitle,
         fontSize: 16,
         fontWeight: FontWeight.w500,
       ),
-      headline4: GoogleFonts.poppins(
+      headlineMedium: GoogleFonts.poppins(
         color: ColorDark.fontTitle,
         fontSize: 14,
         fontWeight: FontWeight.w500,
       ),
-      headline5: GoogleFonts.poppins(
+      headlineSmall: GoogleFonts.poppins(
         color: ColorDark.fontTitle,
         fontSize: 12,
         fontWeight: FontWeight.w500,
       ),
-      bodyText1: GoogleFonts.poppins(
+      bodyLarge: GoogleFonts.poppins(
         color: ColorDark.fontTitle,
         fontSize: 16,
         fontWeight: FontWeight.normal,
       ),
-      bodyText2: GoogleFonts.poppins(
+      bodyMedium: GoogleFonts.poppins(
         color: ColorDark.fontTitle,
         fontSize: 14,
         fontWeight: FontWeight.normal,
       ),
-      subtitle1: GoogleFonts.poppins(
+      titleMedium: GoogleFonts.poppins(
         color: ColorDark.fontSubtitle,
         fontSize: 14,
         fontWeight: FontWeight.normal,
       ),
-      subtitle2: GoogleFonts.poppins(
+      titleSmall: GoogleFonts.poppins(
         color: ColorDark.fontSubtitle,
         fontSize: 12,
         fontWeight: FontWeight.normal,
       ),
-      button: GoogleFonts.poppins(
+      labelLarge: GoogleFonts.poppins(
         color: Colors.white,
         fontSize: 14,
         fontWeight: FontWeight.normal,

@@ -40,7 +40,7 @@ class CustomOutlinedButton extends StatelessWidget {
         ),
         child: Text(
           label!,
-          style: theme.textTheme.bodyText1,
+          style: theme.textTheme.bodyMedium,
         ),
       ),
     );

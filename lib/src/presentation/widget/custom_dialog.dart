@@ -136,7 +136,7 @@ Future<dynamic> showConfirmationDialog(
                 children: [
                   Text(
                     title,
-                    style: theme.textTheme.bodyText1,
+                    style: theme.textTheme.bodyMedium,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 25),
@@ -207,7 +207,7 @@ class _BuildButtonIcon extends StatelessWidget {
           const SizedBox(height: SPACE8),
           Text(
             label,
-            style: theme.textTheme.subtitle1,
+            style: theme.textTheme.displaySmall,
           ),
         ],
       ),

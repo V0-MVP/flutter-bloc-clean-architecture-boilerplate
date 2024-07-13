@@ -26,7 +26,9 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return BlocConsumer<SignInFormBloc, SignInFormState>(
       listener: (context, state) {
-        if (state.state == RequestState.loaded) {}
+        if (state.state == RequestState.loaded) {
+         
+        }
         if (state.state == RequestState.error) {
           showToast(
               msg: state.message,
@@ -84,7 +86,7 @@ class _SignInPageState extends State<SignInPage> {
                       const SizedBox(height: SPACE25),
                       _buildForgotPassword(context),
                       const SizedBox(height: SPACE25),
-                      CustomElevatedButton(
+                   CustomElevatedButton(
                         onTap: () {
                           if (_formKey.currentState!.validate()) {
                             context
@@ -92,8 +94,8 @@ class _SignInPageState extends State<SignInPage> {
                                 .add(const SignInFormEvent.signInWithEmail());
                           }
                         },
-                        // isLoading:
-                        //     (state.state == RequestState.loading) ? true : false,
+                        isLoading:
+                            (state.state == RequestState.loading) ? true : false,
                         labelLoading: 'Signing...',
                         label: 'Sign In',
                       ),
@@ -152,7 +154,7 @@ class _SignInPageState extends State<SignInPage> {
         },
         child: Text(
           'Forgot Password?',
-          style: Theme.of(context).textTheme.bodyText2,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
       ),
     );
@@ -173,7 +175,7 @@ class _SignInPageState extends State<SignInPage> {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Text(
             'Or sign in with',
-            style: theme.textTheme.subtitle2,
+            style: theme.textTheme.bodySmall,
           ),
         ),
         Expanded(
@@ -225,7 +227,7 @@ class _SignInPageState extends State<SignInPage> {
       children: <Widget>[
         Text(
           'Don\'t have an account?',
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
         const SizedBox(width: SPACE8),
         GestureDetector(
@@ -236,7 +238,7 @@ class _SignInPageState extends State<SignInPage> {
             'Register',
             style: Theme.of(context)
                 .textTheme
-                .headline4!
+                .bodyLarge!
                 .copyWith(color: Theme.of(context).primaryColor),
           ),
         )

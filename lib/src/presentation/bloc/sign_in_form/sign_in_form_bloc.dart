@@ -17,6 +17,7 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
           },
           signInWithEmail: (_) async {
             emit(state.copyWith(state: RequestState.loading));
+          await Future.delayed(Duration(seconds: 2));
             final result = await _signInWithEmail.execute(
               state.email,
               state.password,

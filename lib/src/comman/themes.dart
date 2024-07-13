@@ -5,10 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 ThemeData themeLight(BuildContext context) {
   return ThemeData(
     brightness: Brightness.light,
-    backgroundColor: ColorLight.background,
     cardColor: ColorLight.card,
     disabledColor: ColorLight.disabledButton,
-    errorColor: ColorLight.error,
     // highlightColor: ColorLight.fontTitle,
     hintColor: ColorLight.fontSubtitle,
     indicatorColor: ColorLight.primary,
@@ -87,11 +85,8 @@ ThemeData themeLight(BuildContext context) {
 ThemeData themeDark(BuildContext context) {
   return ThemeData(
     brightness: Brightness.dark,
-    backgroundColor: ColorDark.fontSubtitle,
     cardColor: ColorDark.card,
     disabledColor: ColorDark.disabledButton,
-    errorColor: ColorDark.error,
-    // highlightColor: ColorDark.fontTitle,
     hintColor: ColorDark.fontSubtitle,
     indicatorColor: ColorLight.primary,
     iconTheme: const IconThemeData(

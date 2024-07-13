@@ -19,7 +19,7 @@ class AuthenticationRemoteDataSourceImpl
         'email': email,
         'password': password,
       });
-      final token = response.data['token'];
+      final token = response.data['token'].toString();
       await prefs.setString(ACCESS_TOKEN, token);
     } catch (e) {
       rethrow;

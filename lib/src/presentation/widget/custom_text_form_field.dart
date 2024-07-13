@@ -9,7 +9,7 @@ enum TextFieldType { alphabet, email, text, password, phoneNumber, number }
 class CustomTextFormField extends StatelessWidget {
   final _debouncer = Debouncer(milliseconds: 500);
 
-   CustomTextFormField({
+  CustomTextFormField({
     Key? key,
     this.controller,
     this.textFieldType = TextFieldType.text,
@@ -58,68 +58,68 @@ class CustomTextFormField extends StatelessWidget {
 
     final alphabetValidator = MultiValidator([
       RequiredValidator(
-        errorText: "Please enter a value",
+        errorText: 'Please enter a value',
       ),
       PatternValidator(
         r'^[A-Za-z_ .,]+$',
-        errorText: "Invalid data format",
+        errorText: 'Invalid data format',
       ),
     ]);
 
     final emailValidator = MultiValidator([
       RequiredValidator(
-        errorText: "Please enter your email address",
+        errorText: 'Please enter your email address',
       ),
       EmailValidator(
-        errorText: "Invalid email address format",
+        errorText: 'Invalid email address format',
       )
     ]);
 
     final passwordValidator = MultiValidator([
       RequiredValidator(
-        errorText: "Please enter your password",
+        errorText: 'Please enter your password',
       ),
       MinLengthValidator(
         6,
-        errorText: "Password must be more than 6 characters",
+        errorText: 'Password must be more than 6 characters',
       )
     ]);
 
     final phoneNumberValidator = MultiValidator([
       RequiredValidator(
-        errorText: "Please enter your phone number",
+        errorText: 'Please enter your phone number',
       ),
       MinLengthValidator(
         7,
-        errorText: "Invalid phone number format",
+        errorText: 'Invalid phone number format',
       ),
       PatternValidator(
         r'^[0-9]+$',
-        errorText: "Invalid phone number format",
+        errorText: 'Invalid phone number format',
       ),
     ]);
 
     final textValidator = MultiValidator([
       RequiredValidator(
-        errorText: "Please enter a value",
+        errorText: 'Please enter a value',
       ),
       MinLengthValidator(
         minLength,
-        errorText: "Data is too short",
+        errorText: 'Data is too short',
       ),
     ]);
 
     final numberValidator = MultiValidator([
       RequiredValidator(
-        errorText: "Please enter a value",
+        errorText: 'Please enter a value',
       ),
       MinLengthValidator(
         1,
-        errorText: "Data is too short",
+        errorText: 'Data is too short',
       ),
       PatternValidator(
         r'^[0-9]+$',
-        errorText: "Invalid number format",
+        errorText: 'Invalid number format',
       ),
     ]);
 
@@ -164,10 +164,12 @@ class CustomTextFormField extends StatelessWidget {
         maxLines: maxLines,
         maxLength: maxLength,
         enabled: enabled,
-        onChanged: (text) => _debouncer.run(() { onChanged!(text); }) ,
+        onChanged: (text) => _debouncer.run(() {
+          onChanged!(text);
+        }),
         textAlign: textAlign ?? TextAlign.left,
         obscureText: obscureText ?? false,
-        style: theme.textTheme.bodyText1,
+        style: theme.textTheme.bodyMedium,
         inputFormatters: inputFormatters ?? [],
         keyboardType: textInputType ?? keyboardType(textFieldType),
         validator: validator(textFieldType),
@@ -175,14 +177,15 @@ class CustomTextFormField extends StatelessWidget {
         minLines: minline,
         decoration: InputDecoration(
           hintText: hintText,
-          hintStyle: theme.textTheme.subtitle2,
+          hintStyle: theme.textTheme.bodyMedium
+              ?.copyWith(fontWeight: FontWeight.w300, color: Colors.grey),
           labelText: labelText,
-          labelStyle: theme.textTheme.subtitle1,
+          labelStyle: theme.textTheme.displayMedium,
           suffixIcon: suffixIcon,
           prefixIcon: prefixIcon,
           helperMaxLines: helperMaxLines,
           helperText: helperText,
-          helperStyle: theme.textTheme.subtitle2?.copyWith(fontSize: 10),
+          helperStyle: theme.textTheme.bodyMedium?.copyWith(fontSize: 10),
           contentPadding: const EdgeInsets.symmetric(horizontal: SPACE12),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(RADIUS),
@@ -194,11 +197,11 @@ class CustomTextFormField extends StatelessWidget {
           ),
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(RADIUS),
-            borderSide: BorderSide(color: theme.errorColor),
+            borderSide: BorderSide(color: theme.colorScheme.error),
           ),
           focusedErrorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(RADIUS),
-            borderSide: BorderSide(color: theme.errorColor),
+            borderSide: BorderSide(color: theme.colorScheme.error),
           ),
           disabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(RADIUS),

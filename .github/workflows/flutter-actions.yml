@@ -53,5 +53,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/release/*"
-          token: ${{ secrets.STARTER_APP }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           tag: v1.0.${{ github.run_number }}

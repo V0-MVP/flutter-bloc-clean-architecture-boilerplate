@@ -18,6 +18,7 @@ class AppBlocObserver extends BlocObserver {
       ..write('Transition: ${transition.currentState.runtimeType}')
       ..writeln(' => ${transition.nextState.runtimeType}')
       ..write('New State: ${transition.nextState.toString().limit(100)}');
+    logger.info(buffer.toString());
     super.onTransition(bloc, transition);
   }
 
